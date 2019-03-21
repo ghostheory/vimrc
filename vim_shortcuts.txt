@@ -1,0 +1,94 @@
+i - enter insert mode at cursor
+I - enter insert mode at first non-blank character
+s - Delete character under cursor and enter insert mode
+S - Delete line and begin insert at beginning of same line
+a - Enter insert mode _after_ cursor
+A - Enter insert mode at the end of the line
+o - Enter insert mode on the next line
+O - Enter insert mode on the above line
+C - Delete from cursor to end of line and enter insert mode
+
+ESC - Exit insert mode
+Ctrl+[ - Exit insert mode
+. - Repeat last command
+Scanning the canvas
+	Can input number before letter to jump that number of lines - ex) 10k goes up ten lines
+			k
+			^
+		h<		>l
+			v
+			j
+
+Basic Movement
+	w - Forward to the beginning of the next word
+	W - Forward to the beginning of the next WORD
+	b - Backward to the next beginning of a word 
+	B - Backward to the next beginning of a WORD 
+	e - Forward to the next end of word
+	E - Forward to the next end of WORD
+	#G or #gg - move to specific line number
+	G - Go to last line
+	gg - Go to start of file
+	% - Go to next paren
+	* - Go to next occurence of word under cursor
+	0 - Go to column 0
+	^ - Go to first character in line
+	$ - Go to last column
+
+Advanced Movement
+	#f<?> - 2fe -> move forward until two e characters
+	#F<?> - 2Fe -> move backward until two e characters
+	#t<?> - 2te -> move forward to the character before the second e
+	#t<?> - 2Te -> move backward to the character after the second e
+
+
+Code Completion -
+	Ctrl - p - Autocompletes your word. Ctrl - n shows avail options
+
+
+Macros
+	qa - Start recording macro actions
+	q - Stop recording
+	@a - Play macro in register a
+	@@ - Play last macro
+	100@@ - Do last macro 100 times
+
+Searching 
+	/ - search forward, can type in any word
+	? - search backward, can type in any word
+	* - Search forward for current word under cursor
+	# - Search backward for current word under cursor
+	g* - Search forward for current word under cursor - bounded (will match for in forward for example)
+	g# - Search backward for current word under cursor - bounded (will match for in forward for example)
+	n - next instance of search query
+	N - Previous instance of search query
+	\c - Add to any above to make case insensitive
+
+Copy/Paste
+	y - Yank ex) 2yw for yank two words
+	p - Paste after cursor
+	P - Paste before cursor
+	v - Visual Selection	
+
+New shortcuts learned this week (3/12)
+    zF fold a number of lines
+    zt - scrolls past eof, typically followed by 10k to move up a small buffer
+    zz - Seems to work better than above still moves the viewframe but keeps it relative to current cursor position and I like that more 
+    zr - unfolds one level
+    zR - recursively unfolds all in file 
+    zN - set all folds how they should be as defined by foldmethod(mine is currently default)
+    Should probably consider using fold level manual or figure out how to more quickly toggle
+    v for visual mode, wb to move left/right by word, y to yank which gets stored in register
+    Once word you want to search in register (default register 0) then type "/ + ctrl + shift + R 0" to
+    perform search by yanked text
+    ctrl v for visual selection that's only one line? Down up number of lines you want, shift + I to insert, 
+        character you want to insert such as comment '#' and then esc to do multi line comment
+        Does take a second to display
+
+    :sp split vertial
+    :vs split horizontal
+    Note - these are mapped and set in .vimrc and are not default
+    Shift + ctrl + J - Move to split below
+    Shift + ctrl + K - Move to split above
+    Shift + ctrl + L - Move to split right
+    Shift + ctrl + H - Move to split left
