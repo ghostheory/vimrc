@@ -2,15 +2,10 @@
 
 -- when cursor is on a string that is a bash command "shift + k" will open that commands man page for more information
 
--- pressing "." will repeat whatever edits you have just done in insert mode.
+-- pressing "." will repeat whatever edits you have just done in insert mode ("crtl + a" will do the same thing in insert mode).
 
 [Insert Mode]
 
-crtl+p to complete a string
-crtl+
-
-
-
-
-
+-- crtl+p to complete a string
+++ (for more completions, see: https://georgebrock.github.io/talks/vim-completion/)
 
