@@ -92,3 +92,7 @@ New shortcuts learned this week (3/12)
     Shift + ctrl + K - Move to split above
     Shift + ctrl + L - Move to split right
     Shift + ctrl + H - Move to split left
+
+New shortcuts this week (3/19)
+    J - joins line below cursor with current line separated by a space
+
