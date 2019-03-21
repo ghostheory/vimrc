@@ -1,0 +1,16 @@
+[Normal Mode]
+
+-- when cursor is on a string that is a bash command "shift + k" will open that commands man page for more information
+
+-- pressing "." will repeat whatever edits you have just done in insert mode.
+
+[Insert Mode]
+
+crtl+p to complete a string
+crtl+
+
+
+
+
+
+
