@@ -128,7 +128,3 @@ New shortcuts this week (4/21)
     Delete blank lines
         :g/^$/d
             ^ denotes beginning of line while $ denotes end of line
-    
-
-
-            
