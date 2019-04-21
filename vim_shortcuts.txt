@@ -41,6 +41,14 @@ Advanced Movement
 	#t<?> - 2te -> move forward to the character before the second e
 	#t<?> - 2Te -> move backward to the character after the second e
 
+        More examples)
+            If you have the line
+                print("blah blah stuff to delete")
+            From the second quote you can do - 
+                dT"
+            Which will delete 'T'ill the quote giving
+                print("")
+
 
 Code Completion -
 	Ctrl - p - Autocompletes your word. Ctrl - n shows avail options
@@ -96,3 +104,31 @@ New shortcuts learned this week (3/12)
 New shortcuts this week (3/19)
     J - joins line below cursor with current line separated by a space
     :read !bash command -- ex) read !ls *.ini --> reads in the results from the bash command and writes them to file
+    :norm -- Typing :norm and then a series of commands lets you do the literal syntax for a command
+        Example) :norm A and then some (enter)
+            This will append "and then some" to the end of the current line, you can press . to repeat last action 
+    u - undoes one change
+    U - undoes all changes current line
+    % - move to closing paren/bracket/curly brace
+    :s - substitue - example) :s/old/new/g replaces all occurrences of the word old with new in current line
+    	:#,#s/old/new/g - replace all in range of lines
+	:%s/old/new/g - replace all in whole file
+	:%s/old/new/gc - replace all in whole file but prompt for each occurence 
+    gv - re-highlight back into most recent visual selection block
+
+New shortcuts this week (4/21)
+    To convert from tabs to spaces
+        :set expandtab
+        :retab!
+    To convert from spaces to tabs
+        :set noexpandtab
+        :retab!
+    Strip trailing whitespace
+        :%s/\s\+$//e
+    Delete blank lines
+        :g/^$/d
+            ^ denotes beginning of line while $ denotes end of line
+    
+
+
+            
