@@ -1,4 +1,5 @@
 set rnu
+set nu
 syntax enable
 set autoindent
 set shiftwidth=4
@@ -44,8 +45,11 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 colo delek
 
 " Code Folding
-set foldmethod=manual
+set foldmethod=indent
 set foldnestmax=2
+
+" Remap unfold to spacebar
+nnoremap <space> za
 
 " Helper functions
 function! HasPaste()
@@ -55,21 +59,14 @@ function! HasPaste()
     return ''
 endfunction
 
-" Vundle for plugin management
-set nocompatible
-filetype off
-" Plugin '~/.vim/bundle/Vundle.vim'
-
-" Other plugs here
-
-
-
-" Plugins before this line not installed/managed
-" call vundle#end()
-filetype plugin indent on 
-
 " Navigation between split tabs
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" Python highlighting syntax
+let python_highlight_all=1
+
+" Better characters for list characters icons
+set listchars=tab:▸\ ,eol:¬
